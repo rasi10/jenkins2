@@ -22,7 +22,7 @@ pipeline {
                     node -v
                     pwd
                     cd frontend-project/  
-                    npm install 
+                    npm ci 
                     npm run test:report:regression   
                 '''
             archiveArtifacts allowEmptyArchive: true, artifacts: 'frontend-project/cypress/videos/**'
